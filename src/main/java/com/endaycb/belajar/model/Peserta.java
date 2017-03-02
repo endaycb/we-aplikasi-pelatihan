@@ -16,6 +16,7 @@ import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
+import org.hibernate.annotations.GenericGenerator;
 
 /**
  *
@@ -25,8 +26,9 @@ import javax.persistence.TemporalType;
 @Table(name = "peserta")
 public class Peserta {
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
-    private Long id;
+    @GeneratedValue(generator = "uuid")
+    @GenericGenerator(name = "uuid", strategy = "uuid2")
+    private String id;
     
     @Column(nullable = false, unique = true)
     private String kode;
