@@ -26,5 +26,8 @@ public class Materi {
     private String id;
     
     @Column(nullable = false, unique = true)
+    private String kode;
+    
+    @Column(nullable = false, unique = true)
     private String nama;
 }
