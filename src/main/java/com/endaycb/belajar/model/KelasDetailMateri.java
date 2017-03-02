@@ -5,6 +5,7 @@
  */
 package com.endaycb.belajar.model;
 
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
@@ -33,4 +34,7 @@ public class KelasDetailMateri {
     @ManyToOne
     @JoinColumn(name = "id_materi", nullable = false)
     private Materi materi;
+    
+    @Column(nullable = false)
+    private Integer urutan;
 }
