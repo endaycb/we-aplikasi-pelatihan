@@ -1,2 +1,2 @@
-INSERT INTO institusi (id, kode, nama, alamat, website, telepon, npwp) VALUES ('ITS-001', 'AR', 'Artivisi Intermedia', 'Pangkalan Jati Jakarta Timur', 'http://artivisi.com', '02186611859', '123')
-INSERT INTO institusi (id, kode, nama, alamat, website, telepon, npwp) VALUES ('ITS-002', 'BSP', 'Bisnis Solusi Pranata', 'Kelapa Gading', 'http://bsp-groups.com', '0214507673', '1234')
+INSERT INTO institusi (id, kode, nama, alamat, website, telepon, npwp) VALUES ('ITS-001', 'AR', 'Artivisi Intermedia', 'Pangkalan Jati Jakarta Timur', 'http://artivisi.com', '02186611859', '123');
+INSERT INTO institusi (id, kode, nama, alamat, website, telepon, npwp) VALUES ('ITS-002', 'BSP', 'Bisnis Solusi Pranata', 'Kelapa Gading', 'http://bsp-groups.com', '0214507673', '1234');
