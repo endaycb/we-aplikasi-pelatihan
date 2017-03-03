@@ -75,4 +75,63 @@ public class Kelas {
             inverseJoinColumns = @JoinColumn(name = "id_peserta")
     )
     private List<Peserta> daftarPeserta = new ArrayList<>();
+
+    public String getId() {
+        return id;
+    }
+
+    public void setId(String id) {
+        this.id = id;
+    }
+
+    public String getKode() {
+        return kode;
+    }
+
+    public void setKode(String kode) {
+        this.kode = kode;
+    }
+
+    public String getNama() {
+        return nama;
+    }
+
+    public void setNama(String nama) {
+        this.nama = nama;
+    }
+
+    public Date getTanggalMulai() {
+        return tanggalMulai;
+    }
+
+    public void setTanggalMulai(Date tanggalMulai) {
+        this.tanggalMulai = tanggalMulai;
+    }
+
+    public Date getTanggalSelesai() {
+        return tanggalSelesai;
+    }
+
+    public void setTanggalSelesai(Date tanggalSelesai) {
+        this.tanggalSelesai = tanggalSelesai;
+    }
+
+    public List<KelasDetailMateri> getDaftarMateri() {
+        return daftarMateri;
+    }
+
+    public void setDaftarMateri(List<KelasDetailMateri> daftarMateri) {
+        this.daftarMateri = daftarMateri;
+    }
+
+    public List<Peserta> getDaftarPeserta() {
+        return daftarPeserta;
+    }
+
+    public void setDaftarPeserta(List<Peserta> daftarPeserta) {
+        this.daftarPeserta = daftarPeserta;
+    }
+    
+    
+    
 }
