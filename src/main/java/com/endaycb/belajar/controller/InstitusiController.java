@@ -10,9 +10,9 @@ import com.endaycb.belajar.model.Institusi;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.RestController;
 
 /**
@@ -21,14 +21,19 @@ import org.springframework.web.bind.annotation.RestController;
  */
 
 @RestController
+@RequestMapping("/institusi")
 public class InstitusiController {
     
     @Autowired
     private InstitusiDao institusiDao;
     
-    @RequestMapping(value = "/institusi", method = RequestMethod.GET)
-    @ResponseBody
-    public Page<Institusi> getInstitusi(Pageable pageable){
+    @RequestMapping(method = RequestMethod.GET)
+    public Page<Institusi> getAll(Pageable pageable){
         return institusiDao.findAll(pageable);
+    }
+    
+    @RequestMapping(value = "/{id}", method = RequestMethod.GET)
+    public Institusi getById(@PathVariable("id") String id){
+        return institusiDao.findOne(id);
     }
 }
